@@ -29,10 +29,10 @@ public class Menu extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jColorChooser1 = new javax.swing.JColorChooser();
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        botaoAdicionar = new javax.swing.JButton();
+        butaoSair = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        botaoVizualizar = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -41,19 +41,19 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jButton2.setText("Adicionar Contato");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botaoAdicionar.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        botaoAdicionar.setText("Adicionar Contato");
+        botaoAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botaoAdicionarActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jButton3.setText("Sair");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        butaoSair.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        butaoSair.setText("Sair");
+        butaoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                butaoSairActionPerformed(evt);
             }
         });
 
@@ -61,11 +61,11 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("AGENDA DE CONTATOS");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jButton1.setText("Visualizar lista de contatos");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoVizualizar.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        botaoVizualizar.setText("Visualizar lista de contatos");
+        botaoVizualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoVizualizarActionPerformed(evt);
             }
         });
 
@@ -80,12 +80,12 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(129, 129, 129)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botaoVizualizar)
+                    .addComponent(botaoAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(205, 205, 205)
-                .addComponent(jButton3)
+                .addComponent(butaoSair)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -94,11 +94,11 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(botaoVizualizar)
                 .addGap(34, 34, 34)
-                .addComponent(jButton2)
+                .addComponent(botaoAdicionar)
                 .addGap(37, 37, 37)
-                .addComponent(jButton3)
+                .addComponent(butaoSair)
                 .addGap(98, 98, 98))
         );
 
@@ -118,26 +118,24 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botaoVizualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVizualizarActionPerformed
         // TODO add your handling code here:
         TelaVisualizarContatos tela = new TelaVisualizarContatos();
         tela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botaoVizualizarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void butaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoSairActionPerformed
         // TODO add your handling code here:
-            TelaAdicionarContato tela = new TelaAdicionarContato();
-            tela.setVisible(true);
-            this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_butaoSairActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void botaoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdicionarActionPerformed
         // TODO add your handling code here:
         TelaAdicionarContato tela = new TelaAdicionarContato();
         tela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_botaoAdicionarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,9 +174,9 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton botaoAdicionar;
+    private javax.swing.JButton botaoVizualizar;
+    private javax.swing.JButton butaoSair;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
