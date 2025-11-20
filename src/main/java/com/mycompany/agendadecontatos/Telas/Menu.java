@@ -128,6 +128,8 @@ public class Menu extends javax.swing.JFrame {
     private void butaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoSairActionPerformed
         // TODO add your handling code here:
         System.exit(0);
+        hjhgff
+                
     }//GEN-LAST:event_butaoSairActionPerformed
 
     private void botaoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdicionarActionPerformed
