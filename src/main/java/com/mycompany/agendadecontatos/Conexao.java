@@ -4,10 +4,31 @@
  */
 package com.mycompany.agendadecontatos;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  *
  * @author ryann
  */
 public class Conexao {
-    
-}
+    public static Connection conectar() {
+        Connection conexao = null;
+        try{
+            String Url = "jdbc:mysql://localhost:3306/agenda_de_contatos";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(Url, user, password);
+            System.out.println("Conectado com Sucesso");
+            
+        } catch (SQLException e){
+            System.out.println("Erro ao conectar: " + e.getMessage());
+        }
+        return conexao;
+            
+            
+        }
+    }
+
