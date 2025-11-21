@@ -5,6 +5,8 @@
 package com.mycompany.agendadecontatos.Telas;
 
 import javax.swing.JOptionPane;
+import com.mycompany.agendadecontatos.Contato;
+import com.mycompany.agendadecontatos.ContatoBDD;
 
 /**
  *
