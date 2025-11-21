@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.agendadecontatos.Telas;
+import com.mycompany.agendadecontatos.Contato;
+import com.mycompany.agendadecontatos.ContatoBDD;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,8 +39,8 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
         colocarTelefone = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        salvarContato = new javax.swing.JButton();
+        cancelarbut = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -82,19 +85,19 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Salvar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        salvarContato.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        salvarContato.setText("Salvar");
+        salvarContato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                salvarContatoActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setText("Cancelar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cancelarbut.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cancelarbut.setText("Cancelar");
+        cancelarbut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cancelarbutActionPerformed(evt);
             }
         });
 
@@ -109,9 +112,9 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(salvarContato)
                         .addGap(54, 54, 54)
-                        .addComponent(jButton2))
+                        .addComponent(cancelarbut))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
@@ -147,8 +150,8 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(salvarContato)
+                    .addComponent(cancelarbut))
                 .addGap(45, 45, 45))
         );
 
@@ -180,16 +183,33 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void salvarContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarContatoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        String nome = colocarNome.getText();
+        String telefone = colocarTelefone.getText();
+        String email = jTextField3.getText();
+        
+        if (nome.isEmpty() || telefone.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos!");
+            return;
+        }    
+            Contato novoContato = new Contato(nome, telefone, email);
+            ContatoBDD bdd = new ContatoBDD();
+            bdd.salvarContato(novoContato);
+            
+            JOptionPane.showMessageDialog(null, "Contato salvo com sucesso!");
+            colocarNome.setText("");
+            colocarTelefone.setText("");
+            jTextField3.setText("");
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_salvarContatoActionPerformed
+
+    private void cancelarbutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarbutActionPerformed
         // TODO add your handling code here:
         Menu menu = new Menu();
         menu.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_cancelarbutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,10 +247,9 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cancelarbut;
     private javax.swing.JTextField colocarNome;
     private javax.swing.JTextField colocarTelefone;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -239,5 +258,6 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton salvarContato;
     // End of variables declaration//GEN-END:variables
 }
