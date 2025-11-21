@@ -100,6 +100,11 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
 
         butEditar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         butEditar.setText("Editar Contato");
+        butEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butEditarActionPerformed(evt);
+            }
+        });
 
         butExcluir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         butExcluir.setText("Excluir Contato");
@@ -203,6 +208,11 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Selecionar um contato para excluir");
             }
     }//GEN-LAST:event_butExcluirActionPerformed
+
+    private void butEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butEditarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_butEditarActionPerformed
 
     /**
      * @param args the command line arguments
