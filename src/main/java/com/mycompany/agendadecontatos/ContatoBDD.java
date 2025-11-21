@@ -67,6 +67,19 @@ public class ContatoBDD {
     return lista;
 
 }
+    public static boolean excluirContato(int id) {
+        try { 
+            Connection con = Conexao.conectar();
+            PreparedStatement ps = con.prepareStatement("DELETE FROM contatos WHERE ID = ?");
+            ps.setInt(1, id);
+            int LinhasAfetadas = ps.executeUpdate();
+            return LinhasAfetadas > 0;
+            
+        }catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
 
 

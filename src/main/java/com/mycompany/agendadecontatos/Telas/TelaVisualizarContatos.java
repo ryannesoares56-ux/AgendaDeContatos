@@ -7,6 +7,7 @@ import com.mycompany.agendadecontatos.Contato;
 import com.mycompany.agendadecontatos.ContatoBDD;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ryann
@@ -102,6 +103,11 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
 
         butExcluir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         butExcluir.setText("Excluir Contato");
+        butExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butExcluirActionPerformed(evt);
+            }
+        });
 
         butVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         butVoltar.setText("Voltar");
@@ -171,6 +177,32 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
         menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_butVoltarActionPerformed
+
+    private void butExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butExcluirActionPerformed
+        // TODO add your handling code here:
+        int linha = tabeladecontatos.getSelectedRow();
+        if(linha >= 0) {
+            int id = (int) tabeladecontatos.getValueAt(linha, 0);
+            int confirmar = JOptionPane.showConfirmDialog(this,
+                    "Deseja realmente excluir esse contato?",
+                    "Confirmação",
+                    JOptionPane.YES_NO_OPTION);
+            
+            if (confirmar == JOptionPane.YES_OPTION){
+                ContatoBDD cBDD = new ContatoBDD();
+                boolean sucesso = ContatoBDD.excluirContato(id);
+                if (sucesso){
+                    JOptionPane.showMessageDialog(this, "Contato excluído!");
+                    carregarContatos();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Error ao excluir contato.");
+                }
+            } 
+            
+        }else {
+                JOptionPane.showMessageDialog(this, "Selecionar um contato para excluir");
+            }
+    }//GEN-LAST:event_butExcluirActionPerformed
 
     /**
      * @param args the command line arguments
