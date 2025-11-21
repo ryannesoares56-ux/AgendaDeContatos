@@ -68,7 +68,7 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel5.setText("Email ");
+        jLabel5.setText("Email *");
 
         colocarTelefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
