@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.agendadecontatos.Telas;
-
+import com.mycompany.agendadecontatos.Contato;
+import com.mycompany.agendadecontatos.ContatoBDD;
+import javax.swing.table.DefaultTableModel;
+import java.util.List;
 /**
  *
  * @author ryann
@@ -15,6 +18,20 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
      */
     public TelaVisualizarContatos() {
         initComponents();
+        carregarContatos();
+}
+    private void carregarContatos(){
+        String[] colunas = {"ID", "Nome", "Telefone", "Email"};
+        DefaultTableModel modelo = new DefaultTableModel(colunas, 0);
+        
+        ContatoBDD cBDD = new ContatoBDD();
+        List<Contato> contatos = cBDD.listarContatos();
+        for (Contato c : contatos){
+            Object[] linhas = {c.getId(), c.getNome(), c.getTelefone(), c.getEmail()};
+            modelo.addRow(linhas);
+        }
+        tabeladecontatos.setModel(modelo);
+        
     }
 
     /**
@@ -150,6 +167,9 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
 
     private void butVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butVoltarActionPerformed
         // TODO add your handling code here:
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_butVoltarActionPerformed
 
     /**
