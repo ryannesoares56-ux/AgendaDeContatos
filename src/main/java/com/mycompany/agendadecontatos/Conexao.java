@@ -9,8 +9,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- *
- * @author ryann
+ *Aluna(As): Ryanne Soares Pereira e Daniele da Silva Santos;
+ * 2º B Informática
  */
 public class Conexao {
     public static Connection conectar() {

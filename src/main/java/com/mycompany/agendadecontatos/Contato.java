@@ -5,8 +5,8 @@
 package com.mycompany.agendadecontatos;
 
 /**
- *
- * @author ryann
+ *Aluna(As): Ryanne Soares Pereira e Daniele da Silva Santos;
+ * 2º B Informática
  */
 public class Contato {
     private int id;

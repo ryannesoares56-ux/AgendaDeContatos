@@ -8,8 +8,8 @@ import com.mycompany.agendadecontatos.ContatoBDD;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author ryann
+ *Aluna(As): Ryanne Soares Pereira e Daniele da Silva Santos;
+ * 2º B Informática
  */
 public class TelaAdicionarContato extends javax.swing.JFrame {
 

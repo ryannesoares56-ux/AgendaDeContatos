@@ -7,8 +7,8 @@ import com.mycompany.agendadecontatos.Contato;
 import com.mycompany.agendadecontatos.ContatoBDD;
 
 /**
- *
- * @author ryann
+ *Aluna(As): Ryanne Soares Pereira e Daniele da Silva Santos;
+ * 2º B Informática
  */
 public class TelaEditarContato extends javax.swing.JFrame {
     private Contato contato;
