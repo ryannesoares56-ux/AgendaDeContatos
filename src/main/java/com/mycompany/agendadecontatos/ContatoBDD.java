@@ -107,6 +107,28 @@ public class ContatoBDD {
             return false;
         }
     }
+    public void atualizarContato(Contato c){
+        String sql = "UPDATE contatos SET nome =  ?, telefone = ?, email = ? WHERE id = ?" ;
+        
+        try{
+            Connection conn = Conexao.conectar();
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            
+            stmt.setString(1, c.getNome());
+            stmt.setString(2, c.getTelefone());
+            stmt.setString(3, c.getEmail());
+            stmt.setInt(4, c.getId());
+            
+            stmt.executeUpdate();
+            stmt.close();
+            conn.close();
+            
+            System.out.println("Contato Atualizado coom sucesso!");
+            
+        } catch (SQLException e) {
+            System.out.println("Erro ao atualizr contato: " + e.getMessage());
+        }
+    }
 }
 
 

@@ -216,6 +216,18 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
         if (linha >= 0){
             int id = (int) tabeladecontatos.getValueAt(linha, 0);
             Contato c = ContatoBDD.buscarContatoPorId(id);
+            
+            if (c != null) {
+                TelaEditarContato telaEditar = new TelaEditarContato(c);
+                telaEditar.setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(this, "Contato não encontrado");
+  
+            }
+        } else{
+            JOptionPane.showMessageDialog(this, "Selecione um contato para editar");
+            return;
         }
         
     }//GEN-LAST:event_butEditarActionPerformed
