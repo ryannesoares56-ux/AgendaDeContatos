@@ -19,9 +19,9 @@ import java.util.List;
  */
 public class ContatoBDD {
     public void salvarContato(Contato c){
-        String sql = "INSERT INTO agenda_de_contatos (nome, telefone, email) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO contatos (nome, telefone, email) VALUES (?, ?, ?)";
         try {
-            Connection conn = Conexao.getConnection();
+            Connection conn = Conexao.conectar();
             PreparedStatement stmt = conn.prepareStatement(sql);
             
             stmt.setString(1, c.getNome());
@@ -40,10 +40,10 @@ public class ContatoBDD {
     }
     public List<Contato> listarContatos() {
     List<Contato> lista = new ArrayList<>();
-    String sql = "SELECT * FROM agenda_de_contatos";
+    String sql = "SELECT * FROM contatos";
     
     try {
-        Connection conn = Conexao.getConnection();
+        Connection conn = Conexao.conectar();
         PreparedStatement stmt = conn.prepareStatement(sql);
         ResultSet rs = stmt.executeQuery();
         
