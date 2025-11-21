@@ -40,7 +40,7 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         salvarContato = new javax.swing.JButton();
-        cancelarbut = new javax.swing.JButton();
+        voltarMenu = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -93,11 +93,11 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
             }
         });
 
-        cancelarbut.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        cancelarbut.setText("Cancelar");
-        cancelarbut.addActionListener(new java.awt.event.ActionListener() {
+        voltarMenu.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        voltarMenu.setText("Voltar ao menu");
+        voltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarbutActionPerformed(evt);
+                voltarMenuActionPerformed(evt);
             }
         });
 
@@ -114,7 +114,7 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(salvarContato)
                         .addGap(54, 54, 54)
-                        .addComponent(cancelarbut))
+                        .addComponent(voltarMenu))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
@@ -151,7 +151,7 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(salvarContato)
-                    .addComponent(cancelarbut))
+                    .addComponent(voltarMenu))
                 .addGap(45, 45, 45))
         );
 
@@ -204,12 +204,12 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
 
     }//GEN-LAST:event_salvarContatoActionPerformed
 
-    private void cancelarbutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarbutActionPerformed
+    private void voltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuActionPerformed
         // TODO add your handling code here:
         Menu menu = new Menu();
         menu.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_cancelarbutActionPerformed
+    }//GEN-LAST:event_voltarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,7 +247,6 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancelarbut;
     private javax.swing.JTextField colocarNome;
     private javax.swing.JTextField colocarTelefone;
     private javax.swing.JLabel jLabel1;
@@ -259,5 +258,6 @@ public class TelaAdicionarContato extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton salvarContato;
+    private javax.swing.JButton voltarMenu;
     // End of variables declaration//GEN-END:variables
 }
