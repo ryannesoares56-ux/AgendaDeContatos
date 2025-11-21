@@ -4,6 +4,8 @@
  */
 package com.mycompany.agendadecontatos.Telas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ryann
@@ -26,21 +28,289 @@ public class TelaEditarContato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        colocarTelefone = new javax.swing.JTextField();
+        colocarNome = new javax.swing.JTextField();
+        salvarContato = new javax.swing.JButton();
+        voltarMenu = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        colocarTelefone1 = new javax.swing.JTextField();
+        colocarNome1 = new javax.swing.JTextField();
+        salvarContato1 = new javax.swing.JButton();
+        voltarMenu1 = new javax.swing.JButton();
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Adicionar Contato");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel3.setText("Por favor, preencha TODOS os campos solicitados antes de SALVAR.");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setText("Nome *");
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel6.setText("Telefone *");
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel5.setText("Email ");
+
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        colocarTelefone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colocarTelefoneActionPerformed(evt);
+            }
+        });
+
+        colocarNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colocarNomeActionPerformed(evt);
+            }
+        });
+
+        salvarContato.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        salvarContato.setText("Salvar");
+        salvarContato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarContatoActionPerformed(evt);
+            }
+        });
+
+        voltarMenu.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        voltarMenu.setText("Voltar ao menu");
+        voltarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarMenuActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Editar Contato");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel8.setText("Por favor, preencha TODOS os campos solicitados antes de SALVAR.");
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel9.setText("Nome *");
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel10.setText("Telefone *");
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel11.setText("Email ");
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        colocarTelefone1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colocarTelefone1ActionPerformed(evt);
+            }
+        });
+
+        colocarNome1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colocarNome1ActionPerformed(evt);
+            }
+        });
+
+        salvarContato1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        salvarContato1.setText("Salvar");
+        salvarContato1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarContato1ActionPerformed(evt);
+            }
+        });
+
+        voltarMenu1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        voltarMenu1.setText("Cancela");
+        voltarMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarMenu1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(103, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(salvarContato1)
+                        .addGap(54, 54, 54)
+                        .addComponent(voltarMenu1)
+                        .addGap(27, 27, 27))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(339, 339, 339))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(41, 41, 41)
+                                        .addComponent(colocarNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(colocarTelefone1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(103, 103, 103)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(92, 92, 92))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(colocarNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(colocarTelefone1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(salvarContato1)
+                    .addComponent(voltarMenu1))
+                .addGap(46, 46, 46))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void colocarTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarTelefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colocarTelefoneActionPerformed
+
+    private void colocarNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colocarNomeActionPerformed
+
+    private void salvarContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarContatoActionPerformed
+        // TODO add your handling code here:
+        String nome = colocarNome.getText();
+        String telefone = colocarTelefone.getText();
+        String email = jTextField3.getText();
+
+        if (nome.isEmpty() || telefone.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos!");
+            return;
+        }
+        Contato novoContato = new Contato(nome, telefone, email);
+        ContatoBDD bdd = new ContatoBDD();
+        bdd.salvarContato(novoContato);
+
+        JOptionPane.showMessageDialog(null, "Contato salvo com sucesso!");
+        colocarNome.setText("");
+        colocarTelefone.setText("");
+        jTextField3.setText("");
+    }//GEN-LAST:event_salvarContatoActionPerformed
+
+    private void voltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuActionPerformed
+        // TODO add your handling code here:
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_voltarMenuActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void colocarTelefone1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarTelefone1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colocarTelefone1ActionPerformed
+
+    private void colocarNome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarNome1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colocarNome1ActionPerformed
+
+    private void salvarContato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarContato1ActionPerformed
+        // TODO add your handling code here:
+        String nome = colocarNome.getText();
+        String telefone = colocarTelefone.getText();
+        String email = jTextField3.getText();
+
+        if (nome.isEmpty() || telefone.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos!");
+            return;
+        }
+        Contato novoContato = new Contato(nome, telefone, email);
+        ContatoBDD bdd = new ContatoBDD();
+        bdd.salvarContato(novoContato);
+
+        JOptionPane.showMessageDialog(null, "Contato salvo com sucesso!");
+        colocarNome.setText("");
+        colocarTelefone.setText("");
+        jTextField3.setText("");
+    }//GEN-LAST:event_salvarContato1ActionPerformed
+
+    private void voltarMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenu1ActionPerformed
+        // TODO add your handling code here:
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_voltarMenu1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +348,26 @@ public class TelaEditarContato extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField colocarNome;
+    private javax.swing.JTextField colocarNome1;
+    private javax.swing.JTextField colocarTelefone;
+    private javax.swing.JTextField colocarTelefone1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JButton salvarContato;
+    private javax.swing.JButton salvarContato1;
+    private javax.swing.JButton voltarMenu;
+    private javax.swing.JButton voltarMenu1;
     // End of variables declaration//GEN-END:variables
 }

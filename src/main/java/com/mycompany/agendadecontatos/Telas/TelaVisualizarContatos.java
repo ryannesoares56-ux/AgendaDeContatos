@@ -60,7 +60,7 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lista de Contatos");
 
-        tabeladecontatos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tabeladecontatos.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tabeladecontatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -98,7 +98,7 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabeladecontatos);
 
-        butEditar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        butEditar.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         butEditar.setText("Editar Contato");
         butEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +106,7 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
             }
         });
 
-        butExcluir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        butExcluir.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         butExcluir.setText("Excluir Contato");
         butExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,7 +114,7 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
             }
         });
 
-        butVoltar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        butVoltar.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         butVoltar.setText("Voltar");
         butVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,36 +126,37 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addContainerGap(79, Short.MAX_VALUE)
                         .addComponent(butEditar)
-                        .addGap(45, 45, 45)
+                        .addGap(18, 18, 18)
                         .addComponent(butExcluir)
-                        .addGap(45, 45, 45)
-                        .addComponent(butVoltar)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addComponent(butVoltar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(74, 74, 74))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(165, 165, 165))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(39, 39, 39)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(butEditar)
                     .addComponent(butExcluir)
                     .addComponent(butVoltar))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -211,6 +212,11 @@ public class TelaVisualizarContatos extends javax.swing.JFrame {
 
     private void butEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butEditarActionPerformed
         // TODO add your handling code here:
+        int linha = tabeladecontatos.getSelectedRow();
+        if (linha >= 0){
+            int id = (int) tabeladecontatos.getValueAt(linha, 0);
+            Contato c = ContatoBDD.buscarContatoPorId(id);
+        }
         
     }//GEN-LAST:event_butEditarActionPerformed
 

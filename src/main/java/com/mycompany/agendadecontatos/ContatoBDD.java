@@ -18,6 +18,33 @@ import java.util.List;
  * @author ryann
  */
 public class ContatoBDD {
+
+    public static Contato buscarContatoPorId(int id) {
+        Contato contato = null;
+        try {
+            Connection con = Conexao.conectar();
+            String sql = "SELECT * FROM contatos WHERE id = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs.next()){
+                contato = new Contato();
+                contato.setId(rs.getInt("id"));
+                contato.setNome(rs.getString("nome"));
+                contato.setTelefone(rs.getString("telefone"));
+                contato.setEmail(rs.getString("email"));
+            }
+            rs.close();
+            ps.close();
+            con.close();
+            
+        } catch (SQLException e) {
+            System.out.println("Erro ao buscar o contato: " + e.getMessage());
+        }
+        return contato;
+
+    }
     public void salvarContato(Contato c){
         String sql = "INSERT INTO contatos (nome, telefone, email) VALUES (?, ?, ?)";
         try {
